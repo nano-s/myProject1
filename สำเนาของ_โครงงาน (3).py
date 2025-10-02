@@ -18,7 +18,7 @@ if uploaded_file:
     lower_fluorescent = np.array([105, 80, 160])
     upper_fluorescent = np.array([130, 255, 255])
 
-    mask = cv2.inRange(hsv, lower_fluorescent, upper_fluorescent)
+   
 
     st.write(f"hsv type: {type(hsv)}, shape: {hsv.shape}")
     st.write(f"lower: {lower_fluorescent}, upper: {upper_fluorescent}")
@@ -30,6 +30,7 @@ if uploaded_file:
 
 
     # วิเคราะห์ตามโซนต่าง ๆ
+    mask = cv2.inRange(hsv, lower_fluorescent, upper_fluorescent)
     height, width = mask.shape
 zones = {
     "ฝ่ามือ": mask[int(height*0.35):int(height*0.65), int(width*0.25):int(width*0.75)],
