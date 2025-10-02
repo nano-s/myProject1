@@ -18,7 +18,7 @@ if uploaded_file:
     lower_fluorescent = np.array([105, 80, 160])
     upper_fluorescent = np.array([130, 255, 255])
 
-   mask = cv2.inRange(hsv, lower_fluorescent, upper_fluorescent)
+    mask = cv2.inRange(hsv, lower_fluorescent, upper_fluorescent)
 
 
     st.write(f"hsv type: {type(hsv)}, shape: {hsv.shape}")
