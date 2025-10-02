@@ -41,7 +41,7 @@ zones = {
 recommendations = []
 zone_results = {}
 
-    for zone_name, zone_mask in zones.items():
+for zone_name, zone_mask in zones.items():
         zone_area = zone_mask.shape[0] * zone_mask.shape[1]
         zone_fluorescent = cv2.countNonZero(zone_mask)
         zone_percent = (zone_fluorescent / zone_area) * 100
