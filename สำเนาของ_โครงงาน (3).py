@@ -10,15 +10,16 @@ st.title("🧼 วิเคราะห์สารเรืองแสงจ�
 uploaded_file = st.file_uploader("📷 อัปโหลดภาพมือภายใต้แสง UVA", type=["jpg", "png", "jpeg"])
 
 if uploaded_file:
-    # โหลดและแปลงภาพ
     pil_image = Image.open(uploaded_file).convert('RGB')
     image = np.array(pil_image)
-    #hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
-    st.write(f"ชนิดของ image: {type(image)}, shape: {image.shape}")
-    # กำหนดช่วงสีของสารเรืองแสง (สีฟ้า)
+    hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
+
+    # ✅ สร้างตัวแปรก่อนใช้
     lower_fluorescent = np.array([105, 80, 160])
     upper_fluorescent = np.array([130, 255, 255])
+
     mask = cv2.inRange(hsv, lower_fluorescent, upper_fluorescent)
+
     st.write(f"hsv type: {type(hsv)}, shape: {hsv.shape}")
 st.write(f"lower: {lower_fluorescent}, upper: {upper_fluorescent}")
     # คำนวณเปอร์เซ็นต์พื้นที่ fluoresence
