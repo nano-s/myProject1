@@ -19,7 +19,8 @@ if uploaded_file:
     lower_fluorescent = np.array([105, 80, 160])
     upper_fluorescent = np.array([130, 255, 255])
     mask = cv2.inRange(hsv, lower_fluorescent, upper_fluorescent)
-
+    st.write(f"hsv type: {type(hsv)}, shape: {hsv.shape}")
+st.write(f"lower: {lower_fluorescent}, upper: {upper_fluorescent}")
     # คำนวณเปอร์เซ็นต์พื้นที่ fluoresence
     fluorescent_area = cv2.countNonZero(mask)
     total_area = image.shape[0] * image.shape[1]
