@@ -23,9 +23,9 @@ if uploaded_file:
     st.write(f"hsv type: {type(hsv)}, shape: {hsv.shape}")
     st.write(f"lower: {lower_fluorescent}, upper: {upper_fluorescent}")
     # คำนวณเปอร์เซ็นต์พื้นที่ fluoresence
-fluorescent_area = cv2.countNonZero(mask)
-total_area = image.shape[0] * image.shape[1]
-percentage = (fluorescent_area / total_area) * 100
+    fluorescent_area = cv2.countNonZero(mask)
+    total_area = image.shape[0] * image.shape[1]
+    percentage = (fluorescent_area / total_area) * 100
 
     # วิเคราะห์ตามโซนต่าง ๆ
 height, width = mask.shape
