@@ -14,7 +14,7 @@ if uploaded_file:
     pil_image = Image.open(uploaded_file).convert('RGB')
     image = np.array(pil_image)
     hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
-
+    st.write(f"ชนิดของ image: {type(image)}, shape: {image.shape}")
     # กำหนดช่วงสีของสารเรืองแสง (สีฟ้า)
     lower_fluorescent = np.array([105, 80, 160])
     upper_fluorescent = np.array([130, 255, 255])
