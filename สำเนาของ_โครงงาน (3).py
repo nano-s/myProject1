@@ -28,7 +28,7 @@ if uploaded_file:
     percentage = (fluorescent_area / total_area) * 100
 
     # วิเคราะห์ตามโซนต่าง ๆ
-height, width = mask.shape
+    height, width = mask.shape
 zones = {
         "ฝ่ามือ": mask[int(height*0.35):int(height*0.65), int(width*0.25):int(width*0.75)],
         "นิ้วมือ": mask[0:int(height*0.35), int(width*0.2):int(width*0.8)],
