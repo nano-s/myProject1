@@ -50,7 +50,7 @@ for zone_name, zone_mask in zones.items():
             recommendations.append(f"- ควรล้างบริเวณ **{zone_name}** ให้สะอาดขึ้น ({zone_percent:.1f}%)")
 
     # แสดงภาพต้นฉบับและ mask
-    st.image(pil_image, caption="ภาพที่อัปโหลด", use_column_width=True)
+st.image(pil_image, caption="ภาพที่อัปโหลด", use_column_width=True)
 
     fig, ax = plt.subplots(1, 2, figsize=(10, 5))
     ax[0].imshow(image)
