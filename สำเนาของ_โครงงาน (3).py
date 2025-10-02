@@ -30,13 +30,13 @@ if uploaded_file:
     # วิเคราะห์ตามโซนต่าง ๆ
     height, width = mask.shape
 zones = {
-        "ฝ่ามือ": mask[int(height*0.35):int(height*0.65), int(width*0.25):int(width*0.75)],
-        "นิ้วมือ": mask[0:int(height*0.35), int(width*0.2):int(width*0.8)],
-        "หลังมือ": mask[int(height*0.35):int(height*0.65), 0:int(width*0.25)],
-        "ข้อมือ": mask[int(height*0.65):, int(width*0.25):int(width*0.75)],
-        "นิ้วหัวแม่มือ": mask[int(height*0.2):int(height*0.5), int(width*0.8):],
-        "หลังนิ้วหัวแม่มือ": mask[int(height*0.2):int(height*0.5), 0:int(width*0.2)],
-        "ระหว่างนิ้ว": mask[int(height*0.2):int(height*0.35), int(width*0.3):int(width*0.7)]
+     "ฝ่ามือ": mask[int(height*0.35):int(height*0.65), int(width*0.25):int(width*0.75)],
+    "นิ้วมือ": mask[0:int(height*0.35), int(width*0.2):int(width*0.8)],
+    "หลังมือ": mask[int(height*0.35):int(height*0.65), 0:int(width*0.25)],
+    "ข้อมือ": mask[int(height*0.65):, int(width*0.25):int(width*0.75)],
+    "นิ้วหัวแม่มือ": mask[int(height*0.2):int(height*0.5), int(width*0.8):],
+    "หลังนิ้วหัวแม่มือ": mask[int(height*0.2):int(height*0.5), 0:int(width*0.2)],
+    "ระหว่างนิ้ว": mask[int(height*0.2):int(height*0.35), int(width*0.3):int(width*0.7)]
     }
 
 recommendations = []
