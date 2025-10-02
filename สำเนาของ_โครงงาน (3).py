@@ -38,8 +38,8 @@ zones = {
         "ระหว่างนิ้ว": mask[int(height*0.2):int(height*0.35), int(width*0.3):int(width*0.7)]
     }
 
-    recommendations = []
-    zone_results = {}
+recommendations = []
+zone_results = {}
 
     for zone_name, zone_mask in zones.items():
         zone_area = zone_mask.shape[0] * zone_mask.shape[1]
