@@ -52,7 +52,7 @@ for zone_name, zone_mask in zones.items():
     # แสดงภาพต้นฉบับและ mask
 st.image(pil_image, caption="ภาพที่อัปโหลด", use_column_width=True)
 
-    fig, ax = plt.subplots(1, 2, figsize=(10, 5))
+fig, ax = plt.subplots(1, 2, figsize=(10, 5))
     ax[0].imshow(image)
     ax[0].set_title("ภาพต้นฉบับ")
     ax[0].axis('off')
